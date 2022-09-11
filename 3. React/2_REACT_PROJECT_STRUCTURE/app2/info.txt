@@ -1,0 +1,60 @@
+npm WARN config global `--global`, `--local` are deprecated. Use `--location=global` instead.
+
+Creating a new React app in C:\Users\Administrator\Desktop\_\MERN-1\3_React\mysite.
+
+npm WARN config global `--global`, `--local` are deprecated. Use `--location=global` instead.
+Installing packages. This might take a couple of minutes.
+Installing react, react-dom, and react-scripts with cra-template...
+
+npm WARN config global `--global`, `--local` are deprecated. Use `--location=global` instead.
+
+added 1393 packages in 1m
+
+209 packages are looking for funding
+  run `npm fund` for details
+
+Installing template dependencies using npm...
+npm WARN config global `--global`, `--local` are deprecated. Use `--location=global` instead.
+
+added 56 packages in 12s
+
+209 packages are looking for funding
+  run `npm fund` for details
+Removing template package using npm...
+
+npm WARN config global `--global`, `--local` are deprecated. Use `--location=global` instead.
+
+removed 1 package, and audited 1449 packages in 5s
+
+209 packages are looking for funding
+  run `npm fund` for details
+
+6 high severity vulnerabilities
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+Success! Created mysite at C:\Users\Administrator\Desktop\_\MERN-1\3_React\mysite
+Inside that directory, you can run several commands:
+
+  npm start
+    Starts the development server.
+
+  npm run build
+    Bundles the app into static files for production.
+
+  npm test
+    Starts the test runner.
+
+  npm run eject
+    Removes this tool and copies build dependencies, configuration files
+    and scripts into the app directory. If you do this, you can’t go back!
+
+We suggest that you begin by typing:
+
+  cd mysite
+  npm start
+
+Happy hacking!

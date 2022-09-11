@@ -1,0 +1,13 @@
+form -> route (/getValues1)
+form -> method - get
+getValues -> get all values from form and
+send to database (save)
+
+
+// create our own epanel
+http://127.0.0.1:8000/epanel
+- login
+- display all queries
+- filter queries (search based on subject)
+- logout
+

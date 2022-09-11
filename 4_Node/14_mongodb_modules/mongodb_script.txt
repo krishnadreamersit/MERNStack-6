@@ -1,0 +1,79 @@
+Database Management
+use < database_name >
+
+use mern6
+mern6 >_
+mern6 > show dbs
+mern6 > db.dropDatabase()
+
+use mern6 //create and use or use only
+
+Collection Management (table)
+
+Insert an Object (document)
+db.person.insert({object})
+person - Collection
+
+db.person.insert({pid:1, name:'Mitra'})
+db.person.insertOne({pid:2, name:'Bishal'})
+
+db.person.insertMany([
+{pid:3, name:'Mohan', address:'Baneshwor'},
+{pid:4, name:'Tara', email:'tara@gmail.com'},
+{pid:5, name:'Asim', mobile:'9854321234'},
+{pid:6, name:'Noroj', tel:'54321234'},
+{pid:7, name:'Roman', office:'ABC'},
+{pid:8, name:'Suraj', weight:55},
+{pid:9, name:'Rajat', address:'Sanepa', mobile:'34567890', email:'rajat@gmail.com'}
+]);
+
+Select all objects
+db.person.find();
+db.person.find({pid:5});
+db.person.find({name:'Asim'});
+db.person.find().pretty();
+db.person.find().limit(2)
+db.person.find().sort({pid:1}); //ASC
+db.person.find().sort({pid:-1}); //DESC
+db.person.find({pid:{$eq:5}});
+db.person.find({pid:{$gt:5}});
+db.person.find({pid:{$lt:5}});
+db.person.find({$and:[{pid:5}, {name:'Asim'}]});
+db.person.find({$or:[{pid:6}, {name:'Asim'}]});
+db.person.find().count()
+
+# Update document
+db.person.find();
+db.person.updateOne({pid:3}, {$set:{name:'New name'}});
+db.person.find({pid:3});
+
+updateMany()
+
+# Delete Record
+db.person.deleteOne({_id:ObjectId("62d76bb1c537a24dd7d3c10a")})
+db.person.deleteOne({pid:3})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

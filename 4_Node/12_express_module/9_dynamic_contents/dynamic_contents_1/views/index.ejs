@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+</head>
+<body>
+    <h2>Query String</h2>
+    <p><a href='/getValues1?n1=19&n2=13'>Click Me</a></p>
+    
+    <h2>Form get Method</h2>
+    <form method="get" action="getValues2">
+        <p>Number 1 : <input type="text" name="txt1"></p>
+        <p>Number 2 : <input type="text" name="txt2"></p>
+        <p><input type="submit" value="SEND"></p>
+    </form>
+
+    <h2>Form post Method</h2>
+    <form method="post" action="getValues3">
+        <p>Number 1 : <input type="text" name="txt1"></p>
+        <p>Number 2 : <input type="text" name="txt2"></p>
+        <p><input type="submit" value="SEND"></p>
+    </form>
+
+    <h2>Query Parameter</h2>
+    <p><a href='/getValues4/19/13'>Click Me</a></p>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Person Entry Form</title>
+</head>
+<body>
+    <h2>New Person Entry Form</h2>
+    <form action="/display" method="post">
+        <p></p>
+        <p>
+            <label for = "txtUser">USER : </label> 
+            <input type = "text" id = "txtUser" name="txtUser" value="<%= objCookies.tmpUser %>">
+        </p>
+        <p>
+            <label for = "txtPass">PASS : </label> 
+            <input type = "text" id = "txtPass" name="txtPass" value="<%= objCookies.tmpUser %>">
+        </p>
+        <p>
+            <label for = "txtPass">Remember Password </label> 
+            <input type="checkbox" id="chkSave" name="chkSave">
+        </p>
+        <p><input type="submit" value="LOGIN"></p>
+    </form>
+</body>
+</html>

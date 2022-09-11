@@ -1,0 +1,22 @@
+API Testing Tool
+https://insomnia.rest/download
+
+1. Display All
+Terminal
+curl -i -H "Accept: application/json" -H "Content-Type: application/json" -X GET localhost:3000/movies
+
+insomnia/postman
+localhost:3000/movies
+
+2. Get Specific Movie based on id
+Terminal
+curl -i -H "Accept: application/json" -H "Content-Type: application/json" -X GET localhost:3000/movies/101
+
+insomnia/postman
+localhost:3000/movies/101
+
+3. Insert New Record
+curl -X POST --data "name = Toy%20story&year = 1995&rating = 8.5" http://localhost:3000/movies
+
+insomnia/postman
+localhost:3000/movies/

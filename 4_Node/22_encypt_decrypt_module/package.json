@@ -1,0 +1,16 @@
+{
+  "name": "23_working",
+  "version": "1.0.0",
+  "description": "",
+  "main": "encrypt_decrypt_module.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "node-file-encrypt": "^0.0.6"
+  }
+}

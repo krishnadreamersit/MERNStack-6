@@ -1,0 +1,133 @@
+// download and install mongodb
+// download and install mongosh
+show dbs
+use mern7 //create and switch new database
+db //current database
+use test
+> use mern6 //create and switch to new db
+show dbs
+db //current db
+> test
+use mern7 //switch
+test> db.dropDatabase()
+
+//Create Collection and Insert Document
+db> db.person.insertOne({'name':'Krishna'})
+show dbs
+
+//Display all the collections
+db > show collections
+db > db.getCollectionInfos({name:"tecaher"})
+
+# Inserting Record -1
+mydb > db.person.insert ({name:'Krishna', address:'KTM'});
+mydb > db.person.insert ({name:'Keshor', phone:'9841345678'});
+mydb > db.person.insert ({name:'Raj', email:'raj@gmail.com'});
+mydb > db.person.insert ({name:'Rekha', address:'Bhk', phone:'9841345678', email:'rekha@gmail.com'});
+
+# Inserting Record-2
+mydb > db.person.insertOne({name:'Reeta', address:'Lat', phone:'9842457895'});
+
+# Inserting Record-3
+mydb > db.person.insertMany(
+	{name:'Ramesh', address:'Bhk'},
+	{name:'Shree', Phone:'78451268'},
+);
+
+# Select all
+mydb > dn.persons.find();
+mydb > dn.persons.find().pretty();
+mydb > dn.persons.find().limit(2).pretty();
+mydb > dn.persons.find().sort({address:1}).pretty();
+mydb > dn.persons.find().sort({address:-1}).pretty();
+mydb > dn.persons.find({age:{$eq:20});
+mydb > dn.persons.find({age:{$gt:10});
+mydb > dn.persons.find({age:{$in:[10, 12, 13]});
+mydb > dn.persons.find({$and:{age:10}, {address:'Ktm'});
+mydb > dn.persons.find({$or:{age:10}, {address:'Ktm'});
+mydb > dn.persons.find().count();
+
+
+# Projection
+mydb > dn.persons.find({age:10},{_id:0, name:1});
+
+
+# Select all - 2
+mydb > dn.persons.find({address:'ktm'});
+
+# Update Records - 1
+mydb > dn.persons.find()
+mydb > dn.persons.update(
+	{_id:ObjectId("61........")},
+	{name:'New Name', address:'KTM'}
+);
+
+# Update Records - 2
+mydb > dn.persons.find()
+mydb > dn.persons.updateOne(
+	{_id:ObjectId("61........")},
+	{$set:{name:'New Name2'}}
+);
+
+# Update Record - 3 (Rename field)
+mydb > dn.persons.updateOne(
+	{_id:ObjectId("61........")},
+	{$rename:{name:'fullname'}}
+);
+
+# Delete Record -1
+mydb > dn.persons.remove({_id:ObjectId("61........")});
+
+# Delete Record -2
+mydb > dn.persons.deleteOne({_id:ObjectId("61........")});
+
+# Delete Record -3
+mydb > dn.persons.deleteMany({_id:ObjectId("61........")});
+
+# User Authorization and Roles
+
+# Create User
+use mydb
+show users;
+db.createUser({user:'admin', pwd:'admin', roles:[{role:'read' db:'mydb'}]})
+
+# User Roles
+show roles
+= read
+= readWrite
+= readAnyDatabase
+= readWriteAnyDatabase
+= dbAdmin
+= userAdmin
+= userAdminAnyDatabase
+= dbOwner
+= dbAdminAnyDatabase
+= root
+
+# Enable Authorization
+Update on mongod.cfg file as follows
+
+security:
+  authorization: enabled
+
+# Restart Server
+- Run - > services.msc
+
+# Authenticate User
+mongosh --port 27017 --authenticationDatabase "mydb" -u "admin" -p "admin"
+
+mydb > use admin
+mydb > show dbs
+mydb > show collections
+
+# Creating super user
+- disable security
+- admin > db.createUser({user:'root', pwd:'root', roles:['root']})
+- enable security
+
+# Login with root user
+mongosh --authenticationDatabase "admin" -u "root" -p "root"
+
+# Drop user
+db.dropUser("admin");
+const URI "mongodb://admin:admin@localhost:57698/mydb";
