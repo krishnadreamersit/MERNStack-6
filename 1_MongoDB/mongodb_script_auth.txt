@@ -1,7 +1,9 @@
 // download and install mongodb
 // download and install mongosh
+
 show dbs
 use mern7 //create and switch new database
+
 db //current database
 use test
 > use mern6 //create and switch to new db
@@ -9,15 +11,15 @@ show dbs
 db //current db
 > test
 use mern7 //switch
-test> db.dropDatabase()
+mern7 > db.dropDatabase()
 
 //Create Collection and Insert Document
-db> db.person.insertOne({'name':'Krishna'})
+mern7 > db.person.insertOne({'name':'Krishna'})
 show dbs
 
 //Display all the collections
 db > show collections
-db > db.getCollectionInfos({name:"tecaher"})
+db > db.getCollectionInfos({name:"person"})
 
 # Inserting Record -1
 mydb > db.person.insert ({name:'Krishna', address:'KTM'});
@@ -88,8 +90,8 @@ mydb > dn.persons.deleteMany({_id:ObjectId("61........")});
 
 # Create User
 use mydb
-show users;
-db.createUser({user:'admin', pwd:'admin', roles:[{role:'read' db:'mydb'}]})
+mydb > show users;
+mydb > db.createUser({user:'admin', pwd:'admin', roles:[{role:'read', db:'mydb'}]})
 
 # User Roles
 show roles
@@ -108,14 +110,20 @@ show roles
 Update on mongod.cfg file as follows
 
 security:
-  authorization: enabled
+	authorization: enabled
 
 # Restart Server
 - Run - > services.msc
 
+# Insert Record
+mydb > db.person.insert ({name:'Krishna', address:'KTM'})
+mydb > db.person.find()
+
 # Authenticate User
+mongosh --authenticationDatabase "mydb" -u "admin" -p "admin"
 mongosh --port 27017 --authenticationDatabase "mydb" -u "admin" -p "admin"
 
+mydb > db.person.insert ({name:'Bishal Thapa', address:'Lalitpur'}) # ?
 mydb > use admin
 mydb > show dbs
 mydb > show collections
@@ -130,4 +138,9 @@ mongosh --authenticationDatabase "admin" -u "root" -p "root"
 
 # Drop user
 db.dropUser("admin");
-const URI "mongodb://admin:admin@localhost:57698/mydb";
+const URI "mongodb://root:root@localhost:27017/mydb";
+
+Task
+# Project Build -> ReactAPP
+# Accessing Secure MongoDB from Express/ReactAPP
+# Accessing Secure RestAPI from ReactAPP

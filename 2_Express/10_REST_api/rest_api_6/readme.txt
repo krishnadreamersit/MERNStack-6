@@ -28,4 +28,11 @@ GET http://127.0.0.1:3000/api/auth/logout
 GET http://127.0.0.1:3000/api/auth/me
 token missing
 
+GET http://127.0.0.1:3000/api/auth/me
+Header
+Key		Value
+x-access-token	eyJhbGciOiJI...
 
+Reference Site
+https://jasonwatmore.com/post/2022/06/15/react-18-redux-jwt-authentication-example-tutorial
+https://towardsdev.com/jwt-authentication-with-node-js-and-react-dc41ef0e6136
