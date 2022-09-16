@@ -33,6 +33,10 @@ Header
 Key		Value
 x-access-token	eyJhbGciOiJI...
 
+Task:
+- How to call secure RestAPI from React App?
+
 Reference Site
 https://jasonwatmore.com/post/2022/06/15/react-18-redux-jwt-authentication-example-tutorial
 https://towardsdev.com/jwt-authentication-with-node-js-and-react-dc41ef0e6136
+

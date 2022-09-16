@@ -1,0 +1,199 @@
+<script>
+
+	/*
+	//Creating Object
+	const person = {
+		id:1,
+		name:'Raj Thapa',
+		address:'KTM',
+	}
+	
+	//Accessing an object
+	console.log(person);
+	
+	//Accessing property
+	console.log(person.id); // dot notation
+	console.log(person['id']); //Bracket notation
+
+	//Adding property
+	person.email="info@gmail.com";
+	person.mobile="9874561230";
+	console.log(person);
+
+	//Update property value
+	person.email="raj@gmail.com";
+	console.log(person);
+
+	//Delete property
+	delete person.mobile;
+	console.log(person);
+	*/
+
+	//Object method and this keyword
+	/*
+	const person = {
+		id:1,
+		name:'Raj Thapa',
+		address:'KTM',
+		age:25,
+		getBirthYear:function(){
+			console.log("Birth year :"+(2022-this.age));
+		} 
+	}
+	person.getBirthYear();
+	*/
+
+	//Traversing Object
+	/*
+	const person = {
+		id:1,
+		name:'Raj Thapa',
+		address:'KTM',
+		age:25
+	};
+
+	console.log("Example-1");
+	for(let key in person){
+		console.log(key, person[key]);
+	}	
+
+	console.log("Example-2");
+	console.log(Object.keys(person));
+	console.log(Object.values(person));
+
+	console.log("Example-3");
+	for(let key of Object.keys(person)){
+		console.log(key);
+	}
+
+	console.log("Example-4");
+	for(let value of Object.values(person)){
+		console.log(value);
+	}
+	
+	console.log("Example-5");
+	for(let key of Object.keys(person)){
+		console.log(key, person[key]);
+	}
+	*/
+
+	//Nested Object
+	/*
+	const person = {
+		id:1,
+		name:'Raj Thapa',		
+		age:25,
+		address:{
+			tole:'Jamal',
+			ward:1,
+			mpc:'KTM',
+			district:'KTM',
+		},
+	};
+	*/
+
+
+	//Object Destructuring
+	/*
+	const person = {
+		id:1,
+		name:'Raj Thapa',		
+		age:25,
+		address:{
+			tole:'Jamal',
+			ward:1,
+			mpc:'KTM',
+			district:'KTM',
+		},
+	};
+	*/
+
+	//Example-1
+	/*
+	console.log(person.id);
+	console.log(person.name);
+	console.log(person.age);
+	console.log(person.address);
+	console.log(person.address.tole);
+	console.log(person.address.ward);
+	console.log(person.address.mpc);
+	console.log(person.address.district);
+	*/
+
+	//Example-2
+	/*
+	const {id, name, age, address} = person;
+	console.log(id);
+	console.log(name);
+	console.log(age);
+	console.log(address);
+	console.log(address.tole);
+	console.log(address.ward);
+	console.log(address.mpc);
+	console.log(address.district);
+	*/
+
+	//Example-3
+	/*
+	const {id, name, age, address} = person;
+	const {tole, ward, mpc, district} = address;
+	console.log(id);
+	console.log(name);
+	console.log(age);
+	console.log(tole);
+	console.log(ward);
+	console.log(mpc);
+	console.log(district);
+	*/
+
+	//Cloning an Object
+	/*
+	const person = {
+		id:1,
+		name:'Raj Thapa',		
+		age:25,	
+	};
+	
+	//Example-1
+	const tmpPerson = {};
+	tmpPerson.id = person.id;
+	tmpPerson.name = person.name;
+	tmpPerson.age = person.age;
+	console.log(person);
+	console.log(tmpPerson);
+
+	//Example-2
+	const tmpPerson2 = {};
+	for(let key in person){
+		tmpPerson2[key] = person[key];
+	}
+	console.log(person);
+	console.log(tmpPerson2);
+
+	//Example-3
+	const tmpPerson3 = Object.assign({}, person);
+	console.log(person);
+	console.log(tmpPerson3);
+	*/
+
+	//JSON Format
+	const person = {
+		id:1,
+		name:'Raj Thapa',		
+		age:25,	
+	};
+
+	//Object to JSON
+	const jsonPerson = JSON.stringify(person);
+	console.log(person);
+	console.log(jsonPerson);
+
+	//JSON to Object
+	const objPerson = JSON.parse(jsonPerson);
+	console.log(person);
+	console.log(objPerson);
+
+
+
+
+</script>

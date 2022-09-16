@@ -1,11 +1,14 @@
 1. Create and Build App
 npx create-react-app my-react-app
-npx create-react-app my-react-app --template typescript
-npm start
-npm run build
-npx serve
+OR
+npx create-react-app my-react-app --template typescript //creating new app
 
-2. Create, Build, and Deploy on heroku
+npm start			//run app
+npm run build		//build app
+npm install -g serve		//package install to server (run) build
+serve -s build  		//run build
+
+2. Create, Build, and Deploy on Heroku
 - https://stackabuse.com/how-to-deploy-a-react-app-to-heroku/
 - https://www.geeksforgeeks.org/how-to-deploy-react-app-to-heroku/
 - https://betterprogramming.pub/how-to-deploy-your-react-app-to-heroku-aedc28b218ae

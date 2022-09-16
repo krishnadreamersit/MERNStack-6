@@ -1,0 +1,93 @@
+<script>
+//Class
+/*
+function Person(){
+	this.id=1;
+	this.name="Broadway";	
+}
+var p1 = new Person();
+console.log(p1);
+*/
+
+//Constructor
+/*
+function Person(id=0, name=""){
+	this.id=id;
+	this.name=name;	
+}
+
+p1 = new Person(1, "Broadway");
+console.log(p1);
+*/
+
+//Method
+/*
+function Calculator(num1=0, num2=0){
+	this.num1=num1;
+	this.num2=num2;
+	this.num3 = 0;
+	this.sum = function calcSum(){
+		this.num3=this.num1+this.num2;
+	}
+
+	this.toString = function toString(){
+		return (`Num1: ${this.num1}, Num2: ${this.num2}, Num3: ${this.num3}`);
+	}	
+}
+
+c1 = new Calculator(5, 4);
+c1.sum();
+console.log(c1.toString());
+*/
+
+//Properties
+/*
+function Calculator(num1=0, num2=0){
+	this.num1=num1;
+	this.num2=num2;
+	this.num3 = 0;
+
+	Object.defineProperties(this, {
+		"firstNo": {
+            get: function () {
+                return this.num1;
+            },
+            set: function (value) {
+                this.num1 = value;
+            }
+        },
+		"secondNo": {
+            get: function () {
+                return this.num2;
+            },
+            set: function (value) {
+                this.num2 = value;
+            }
+        },
+		"thirdNo": {
+            get: function () {
+                return this.num3;
+            }          
+        }
+	});
+
+	this.sum = function calcSum() {
+		this.num3 = this.num1+this.num2;
+	}
+	this.toString = function toString(){
+		return (`FirstNo : ${this.num1}, 
+			SecondNo : ${this.num2}, Result : ${this.num3}`);
+	}
+}
+*/
+
+var c2 = new Calculator(4, 2);
+c2.sum();
+console.log(c2);
+
+c2.firstNo=4;
+c2.secondNo=6;
+c2.sum();
+console.log(c2.firstNo, c2.secondNo, c2.thirdNo);
+
+</script>

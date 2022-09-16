@@ -1,0 +1,174 @@
+<script>
+	//1. Assignment Operator
+	//assignment
+	var num1, num2, num3;
+	num1 = 34;
+	num2 = num1;
+	console.log(num2);	
+	
+	//multiple assignment
+	num2 = num1 = 87;
+	console.log(num2);	
+	
+	//shorthand assignment
+	num2+=13;
+	console.log(num2);	
+	
+	//2. Arithmetic Operator
+	//Addition +
+	num3 = num1 + num2;
+	console.log(num3);	
+	
+	//Substraction
+	num3 = num1 - num2;
+	console.log(num3);	
+	
+	//Multiplication
+	num3 = num1 * num2;
+	console.log(num3);	
+	
+	//Division
+	num3 = num1 / num2;
+	console.log(num3);	
+	
+	//Remainder
+	num3 = num1 % num2;
+	console.log(num3);	
+	
+	//Increment and Decrement by 1
+	num3 = num1++;
+	console.log(num3);	
+	
+	num3 = num2--;
+	console.log(num3);	
+	
+	//Exponentation
+	num3 = num1 ** num2;
+	console.log(num3);
+	
+	//Power
+	num3 = Math.pow(num1, num2);
+	console.log(num3);
+		
+	//Square root
+	num3 = Math.sqrt(num1);
+	console.log(num3);	
+	
+	//3. Comparison Operators	
+	//==	Equal to
+	num1 = 5;
+	num2 = 3;
+	var result = (num1 == num2);
+	console.log(result);
+
+	//!=	Not equal to
+	num1 = 5;
+	num2 = 3;
+	result = (num1 != num2);
+	console.log(result);
+	
+	//===	Strict equal to
+	num1 = 5.0;
+	num2 = 5;
+	result = (num1 === num2);
+	console.log(result);
+	
+	//!==	Strict not equal to
+	num1 = 5;
+	num2 = 5.0;
+	result = (num1 !== num2);
+	console.log(result);
+	
+	//>	Greater than
+	num1 = 5;
+	num2 = 4.5;
+	result = (num1 > num2);
+	console.log(result);
+	
+	//>=	Greater than or equal to
+	num1 = 5;
+	num2 = 5;
+	result = (num1 >= num2);
+	console.log(result);
+	
+	//<	Less than
+	num1 = 3;
+	num2 = 5;
+	result = (num1 < num2);
+	console.log(result);
+	
+	//<=	Less than or equal to
+	num1 = 3;
+	num2 = 3;
+	result = (num1 < num2);
+	console.log(result);
+	
+	//4. Logical Operator
+	// &&	Logical AND
+	//||	Logical OR
+	//!		Logical NOT
+	
+	//5. String Operator
+	// concatenation operator	
+	let str1 = 'Broadway';
+	str1 += ' Infosys Nepal';
+	console.log(str1);
+	
+	//6. Other Operators
+	//Comma			,
+	//let num1 = (3,4,5,6);
+	//console.log(num1);
+	
+	//Conditional	?:
+	result = (5>7)?true:false;
+	console.log(result);
+	
+	//Delete		
+	var arr1 = [1,4,5,6,8];
+	delete arr1[4];
+	console.log(arr1);
+	
+	//typeof
+	console.log(typeof(result));
+	
+	//in
+	student = {id:1, name:'raj', address:'ktm'};
+	result = 'name' in student;
+	console.log(result);
+	
+	//instanceof
+	result = arr1 instanceof Array;
+	console.log(result);
+	
+	//void
+	const output = void 1;
+	console.log(output);
+	
+	//Type Conversion	
+	//Implicit conversion		
+	result = '301' + 2; 
+	console.log(result) // "3012"
+	
+	result = '4' - '2';
+	console.log(result); // 2
+	
+	result = 'hello' - 'world';
+	console.log(result); // NaN
+
+	//Explicit Conversion
+	result = Number("123");
+	result+=1;
+	console.log(result);
+	
+	result = parseInt("123");
+	result+=1;
+	console.log(result);
+	
+	result = String(123);
+	result+=1;
+	console.log(result);
+	
+	result = (123).toString();
+	result+=1;
+	console.log(result);	
+</script>

@@ -1,0 +1,71 @@
+<script src="functions.js"></script>
+<script>	
+	//Hoisting variable	
+	/*
+	//Example-1
+	console.log(var1); //undefined
+	var var1 ="Broadway";
+	
+	//Example-2
+	var var2;
+	console.log(var2); // undefined
+	var2 = 1;
+	
+	//Example-3
+	//Uncaught ReferenceError: Cannot access 
+	//'var3' before initialization
+	console.log(var3); 
+	let var3 ="Broadway";
+	*/		
+</script>
+
+<script>
+	//f1();
+	//f2();
+	//f3()
+	//Uncaught ReferenceError: str3 is not defined
+	//console.log(str2+", "+str3); 			
+	//f5(1);
+	//ShowMessage("Raj Thapa");
+
+	//Arrow function
+	//sayHi("How are you?")	
+	//var result = sum(34, 32);
+	//console.log(result);	
+</script>
+
+<script>
+	function f1(){
+		var var1 ="Nepal";
+	}	
+	//console.log(var1); //ReferenceError: var1 is not defined
+
+	function f2(){
+		var var1 ="Nepal";
+		var var1 ="Kathamndu";		
+	}
+	
+	function f2(){
+		let var1 ="Nepal";		
+	}
+	
+	function f3(){
+		//let var1 ="Nepal";		
+		//let var1 ="Kathmandu";		
+	}
+
+	function f4(){
+		const var1 ="Nepal";
+		var1="Kathmandu"; //SyntaxError: Identifier 'var1' has already been declared
+	}	
+
+</script>
+
+<script>
+	//f5();
+	//f5("Broadway", "KTM");
+	
+	console.log(calcSum(1, 2));
+	console.log(calcSum(1, 2, 3, 4, 5));
+
+</script>

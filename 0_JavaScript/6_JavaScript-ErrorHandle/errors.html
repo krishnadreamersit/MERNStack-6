@@ -1,0 +1,63 @@
+<div id="message"></div>
+<div id="message2"></div>
+<script>
+
+	//Syntax error
+	//window.alert("Hello";
+	
+	
+	//Runtime error
+	//window.show();
+	
+	//Logical error	
+	//Program to add two numbers
+	var n1=9, n2=9; n3=null;
+	n3 =  n1 * n2;
+	console.log(n3);
+	
+	//Error Handling
+	try
+	{
+		var result  =  Sum(10, 20); // Sum is not defined yet
+		document.getElementById("message").innerHTML = result;
+	}
+	catch(ex)
+	{
+		document.getElementById("message").innerHTML = ex;
+	}
+
+	//try, catch, finally
+	try
+	{
+		var result  =  Sum(10, 20); // Sum is not defined yet
+		document.getElementById("message").innerHTML = result;
+	}
+	catch(ex)
+	{
+		document.getElementById("message").innerHTML = ex;
+	}
+	finally{
+		document.getElementById("message2").innerHTML = "finally block executed";
+	}
+	
+	
+	//throw
+	try{
+		throw "Error occurred";
+	}
+	catch(ex){
+		alert(ex);
+	}
+
+	//throw
+	try {
+		throw {
+			number: 101,
+			message: "Error occurred"
+		};
+	}
+	catch (ex) {
+		alert(ex.number + "- " + ex.message);
+	}
+	
+</script>

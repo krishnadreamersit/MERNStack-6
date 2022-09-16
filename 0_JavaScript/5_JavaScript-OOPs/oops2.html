@@ -1,0 +1,153 @@
+<script>
+/*
+//Class with instance variable
+class Person {
+    pid=0;
+    name="NA"
+}
+
+//Object
+p1 = new Person();
+p1.pid=1;
+p1.name="Broadway";
+console.log(p1);
+*/
+
+//Class with constructor
+/*
+class Person {
+    //Instance varaibles
+    pid=0;
+    name="NA";    
+    //Constructor
+    constructor(pid=0, name="NA"){
+        this.pid=pid;
+        this.name=name;
+    }       
+}
+
+//Object
+p1 = new Person();
+console.log(p1)
+p1 = new Person(1);
+console.log(p1)
+p1 = new Person(2, "Broadway");
+console.log(p1)
+p1.name="Raj Rai";
+console.log(p1)
+*/
+
+//Methods - Setters/Getters
+
+class Person {
+    //Instance varaibles
+    pid=0;
+    name="NA";    
+    
+    //Constructor
+    constructor(pid=0, name="NA"){
+        this.pid=pid;
+        this.name=name;
+    }
+    //Getters
+    getPID(){
+        return this.pid;
+    }
+    getName(){
+        return this.name;
+    }
+    //Setters
+    setPID(pid){
+        this.pid=pid;
+    }
+    setName(name){
+        this.name=name;
+    }
+    toString(){
+        return (`ID : ${this.pid}, NAME: ${this.name}`);
+    }
+}
+
+/*
+p1 = new Person(1, "Broadway");
+console.log(p1.toString());
+p1.setName("Raj Rai");
+console.log(p1.toString());
+*/
+
+//Inheritance
+/*
+class NewPerson extends Person{
+    address="NA";
+    phone = "NA";
+
+    constructor(pid, name, address, phone){
+        super(pid, name);
+        this.address=address;
+        this.phone=phone;
+    }
+    //Getters
+    getAddress(){
+        return this.address;
+    }
+    getPhone(){
+        return this.phone;
+    }
+
+    //setters
+    setAddress(address){
+        this.address=address;
+    }
+    setPhone(phone){
+        this.phone=phone;
+    }
+    //toString
+    toString(){
+        return (`${super.getPID}, ${super.getName}, ${this.address}, ${this.phone}`);
+    }
+}
+
+np1 = new NewPerson(1, "Raj Sharma", "Ktm", "98675432");
+console.log(np1);
+*/
+
+//Encapsulation
+//Private memeber
+/*
+class User{    
+    user_name;
+    #user_pass;
+}
+
+user = new User();
+user.user_name="admin";
+user.user_pass="admin";
+console.log(user);
+*/
+
+//Private methods
+class User{
+    user_name;
+    #user_pass;
+    constructor(user_name="NA", user_pass="NA"){
+        this.user_name=user_name;
+        this.#user_pass=user_pass;
+    }    
+    setUserName(user_name){
+        this.user_name=user_name;
+    }
+    setUserPass(user_pass){
+        this.#user_pass=user_pass;
+    }
+    toString(){
+        return (`${this.user_name}, ${this.#user_pass}`);
+    }
+}
+
+u1 = new User();
+u1.setUserName("Raj");
+u1.setUserPass("nepal123");
+console.log(u1.user_name, u1.setUserPass);
+console.log(u1);
+console.log(u1.toString());
+</script>

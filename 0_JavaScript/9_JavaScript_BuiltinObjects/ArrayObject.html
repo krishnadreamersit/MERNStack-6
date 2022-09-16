@@ -1,0 +1,307 @@
+<script>
+   //Declare an array
+   /*
+   var arr1 = [4,5,6,7,8];
+   console.log(typeof arr1);
+   console.log(arr1.length);
+   console.log(arr1);
+   */
+
+   //Indexing
+   /*
+   console.log(arr1[0]);
+   console.log(arr1[1]);
+   console.log(arr1[2]);
+   console.log(arr1[3]);
+   console.log(arr1[4]);
+   //console.log(arr1[-1]); //undefined
+   //console.log(arr1[5]); //undefined
+    */
+
+   //Array and Loop
+   /*
+   for(let i =0; i<arr1.length; i++){
+    console.log(arr1[i]);
+   }
+   */
+
+    //Array and Loop-2
+    /*
+    for(let index in arr1){
+        console.log(arr1[index]);
+    }
+    */
+
+    //Array and Loop-3
+    /*
+    for(let item of arr1){
+        console.log(item);
+    }
+    */
+
+    //Methods
+    
+    //Array.from() method
+    /*
+    var arr1 = Array.from("Broadway");
+    console.log(typeof arr1);
+    console.log(arr1.length);
+    console.log(arr1);
+    */
+
+    //Array.isArray()->boolean
+    /*
+    var var1 = 4758;    
+    var arr1 = [4,5,6,7,8];
+    console.log(typeof var1);
+    console.log(typeof arr1);
+    console.log(Array.isArray(var1));
+    console.log(Array.isArray(arr1));
+    */
+
+    //Array.of()
+    /*
+    var arr1 = Array.of(5);
+    console.log(typeof arr1);
+    console.log(Array.isArray(arr1));
+    console.log(arr1.length);
+
+    var arr1 = Array.of(5,6,7,8,9);
+    console.log(typeof arr1);
+    console.log(Array.isArray(arr1));
+    console.log(arr1.length);
+    */
+
+    //Array.at()
+    /*
+    var arr1 = Array.of(5,6,7,8,9);
+    var index = 3;
+    var var1 = arr1.at(index);
+    console.log(var1);
+    */
+
+    //Array.concat()
+    /*
+    var arr1 = Array.of(5,6,7,8,9);
+    var arr2 = Array.of(8,1,2,8,9);
+    var arr3 = arr1.concat(arr2);
+    console.log(typeof arr3);
+    console.log(Array.isArray(arr3));
+    console.log(arr3.length);
+    */
+
+    //Array.copyWithin()
+    //copyWithin(target)
+    //copyWithin(target, start)
+    //copyWithin(target, start, end)
+
+    //var arr1 = Array.of(1,2,3,4,5);
+    //var var1 = arr1.copyWithin(0, 2, 4);
+    //console.log(arr1);
+    //console.log(var1);
+
+    //Array.entries()
+    /*
+    const array1 = ['a', 'b', 'c', 'd', 'e'];
+    const iterator1 = array1.entries();
+    console.log(iterator1.next().value);
+    console.log(iterator1.next().value);
+
+    //for loop
+    for (let element of iterator1) {
+        console.log(element);
+    }
+
+    //for each loop
+    for (const [index, element] of array1.entries()) {
+        console.log(index, element);
+    }
+    */
+
+    //Array.every()
+    /*
+    var isBelowThreshold = (currentValue) => currentValue <= 40;
+    var arr1 = [1, 30, 39, 29, 40, 13];
+    console.log(arr1.every(isBelowThreshold));
+    */
+
+    //Array.fill()
+    /*
+    fill(value)
+    fill(value, start)
+    fill(value, start, end)
+    */
+    
+    /*
+    var arr1 = [1, 2, 3, 4, 5];
+    arr1.fill(10);
+    console.log(arr1);
+
+    var arr1 = [1, 2, 3, 4, 5];
+    arr1.fill(10, 2, 4);
+    console.log(arr1);
+    */
+
+    //Array.filter()
+    /*
+    function isBigEnough(value) {
+        return value >= 3
+    }    
+    var arr1 = [1, 2, 3, 4, 5];
+    var result = arr1.filter(isBigEnough)
+    console.log(result);
+    */
+
+    //Array.find()
+    /*
+    let arr1 = [1, 2, 3, 4, 5];
+    let result = arr1.find(element => element > 3);
+    console.log(result);
+    */
+
+//Array.reduce()
+
+
+//Array.reduceRight()
+	/*
+	const array1 = [[0, 1], [2, 3], [4, 5]];
+	const result = array1.reduceRight((accumulator, currentValue) => accumulator.concat(currentValue));
+	console.log(result);
+	// expected output: Array [4, 5, 2, 3, 0, 1]
+	*/
+	
+//Array.reverse()
+	//reverse()
+	/*
+	let arr1 = [1, 2, 3, 4, 5];
+	console.log(arr1);
+	arr1.reverse();
+	console.log(arr1);
+	*/
+	
+//Array.shift()
+	//shift()
+	/*
+	var arr1 = [4,5];
+	console.log(arr1.shift());
+	console.log(arr1.shift());
+	console.log(arr1);
+	*/
+	
+//Array.slice()
+	//slice()
+	//slice(start)
+	//slice(start, end)
+
+	/*
+	const arr1 = ['Khotang', 'Dhankuta', 'Jhapa',  'Ilam', 'Morang', 'Bhojpur', 'Okhaldhunga', 'Panchthar', 'Sankhuwasabha','Solukhumbu', 'Sunsari','Udayapur', 'Taplejung', 'Terhathum'];
+	var arr2 = arr1.slice();
+	console.log(arr2);
+	
+	var arr2 = arr1.slice(5);
+	console.log(arr2);
+	
+	var arr3 = arr1.slice(5,9);
+	console.log(arr3);
+	*/
+	
+//Array.some()
+	/*
+	//Compare function
+	const arr0 = [1, 2, 3, 4, 5];
+	function isBiggerThan5(element, index, array) {
+		return element > 4;
+	}
+	console.log(arr0.some(isBiggerThan5));
+	
+	//Arrow function
+	const arr1 = [1, 2, 3, 4, 5];
+	const even = (element) => element % 2 === 0;
+	console.log(arr1.some(even));
+	*/
+	
+//Array.sort()	
+	/*
+	//Function less
+	const arr1 = ['Khotang', 'Dhankuta', 'Jhapa',  'Ilam', 'Morang', 'Bhojpur', 'Okhaldhunga', 'Panchthar', 'Sankhuwasabha','Solukhumbu', 'Sunsari','Udayapur', 'Taplejung', 'Terhathum'];
+	console.log(arr1);
+	arr1.sort();
+	console.log(arr1);
+	
+	//Compare function
+	const arr2 = [3,2,5,4,1];
+	arr2.sort(function(a, b){
+		return a-b;
+	});
+	console.log(arr2);
+
+	//Arrow function
+	const arr3 = [3,2,5,4,1];
+	arr3.sort((a, b)=>a-b);	
+	console.log(arr3);
+	
+	
+//Array.splice()
+	//splice(start)
+	//splice(start, deleteCount)
+	//splice(start, deleteCount, item1)
+	//splice(start, deleteCount, item1, item2, itemN)
+	
+	//Add Item
+	/*
+		const months = ['Jan', 'March', 'April', 'June'];
+		months.splice(1, 0, 'Feb'); 
+		console.log(months); //['Jan', 'Feb', 'March', 'April', 'June'
+		months.splice(4, 0, 'May');
+		console.log(months); //['Jan', 'Feb', 'March', 'April', 'May', 'June']
+		months.splice(6, 0, 'July', 'August');
+		console.log(months); //['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'August']
+	*/
+	
+	//Delete
+	/*
+		const months2 = ['Jan', 'March', 'April', 'June', 'Jan'];
+		//months2.splice(); //Delete all
+		//months2.splice(0, 2); //['April', 'June', 'Jan']
+		console.log(months2)
+	*/
+	
+//Array.toLocaleString()
+	
+//Array.toString()
+	/*
+    const array1 = [1, 2, 3, 4, 5];
+    console.log(array1.toString());
+	*/
+    
+//Array.unshift()
+    /*
+    const arr1 = [1, 2, 3, 4];
+    console.log(arr1);
+    arr1.unshift(4, 5);
+    console.log(arr1);
+    */
+
+//Array.values()
+    /*
+    var arr1 = ['a', 'b', 'c'];
+    var iterator = arr1.values();
+    for (const value of iterator) {        
+        console.log(value);        
+    }
+    */    
+
+
+
+
+      
+
+
+
+
+
+
+
+    
+
+</script>
